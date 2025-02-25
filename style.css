@@ -1,0 +1,305 @@
+*{
+  font-family: 'Poppins-Regular', sans-serif;
+}
+body{
+  padding-top: 50px;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: cornsilk;
+}
+p{
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 2;
+}
+a{
+  font-family: 'Poppins-Regular', sans-serif;
+}
+h2{
+  border-bottom: 2px orangered solid ;
+}
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('/media/Poppins-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Poppins-Semi-Bold';
+  src: url('/media/Poppins-SemiBold.ttf') format('truetype');
+}
+header{
+  z-index: 100;
+  display: flex;
+  background: linear-gradient(to right, rgb(255, 187, 0), #EA6913);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50px;
+  justify-content: space-between;
+  padding: 10px 2rem;
+  color: black;
+}
+header ul{
+  display: flex;
+  justify-content: space-between;
+}
+.logo{
+  width: 100px;
+  filter: brightness(100);
+}
+nav li{
+  list-style: none;
+  margin-left: 35px;
+  transition: border-bottom 0.3s;
+}
+nav a{
+  text-decoration: none;
+  color: whitesmoke;
+  color: black;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  font-family: 'Poppins-Regular', sans-serif;
+}
+nav li:hover{
+  border-bottom: 1px white solid;
+}
+/*Hero Styling*/
+.hero h1{
+  color: white;
+  z-index: 99;
+}
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100vw;
+  background: url('/media/aramide\ 6.jpg'); /* Replace with your image path */
+  background-size: cover 100vw 60vh; /* Ensures the image covers the entire screen */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: top;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background: rgba(18, 18, 32, 0.9); /* Adjust opacity */
+  z-index: 1;
+}
+.hero h1{
+  position: absolute;
+  font-size: 50px;
+  border-bottom: 3px solid orangered;
+  transition: all 0.2s ;
+}
+.hero h1:hover{
+  color: orangered;
+  border-bottom: white solid 3px;
+}
+
+/* Main Style Begins*/
+main{
+  
+}
+/*Style for the first grid*/
+.first-grid{
+  margin: 2rem 5rem;
+  display: grid;
+  grid-template-columns: 40vw 1fr;
+  gap: 30px;
+  padding: 0;
+}
+.col2 p{
+  float: right;
+  margin-top: 0;
+}
+.col2 img{
+  margin-bottom: 0;
+  width: 100%;
+  margin-top: 0;
+}
+blockquote{
+  font-style: italic;
+  font-size: 14px;
+  margin: 0;
+  float: right;
+}
+
+
+.second-grid{
+  background-color: rgba(238, 210, 159, 0.452);
+  margin-right: 0;
+  padding: 5rem 8rem;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 40px;
+  align-items: center;
+}
+.second-grid img{
+  box-shadow: -8px -8px 0 orangered;
+  height: 500px;
+  width: 40vw;
+  object-fit: cover;
+  object-position: center;
+}
+.second-grid h2{
+  border-bottom: 2px orangered solid ;
+  display: inline-block;
+}
+
+/*What we styles*/
+.what-we-do{
+  display:  grid;
+  grid-template-columns: 35vw 35vw;
+  padding: 5rem 15rem;
+  gap: 100px;
+  justify-content: center;
+}
+.stack h2{
+  display: inline-block;
+}
+.stack img{
+  filter: brightness(-20);
+}
+.stack1{
+  width: 100%;
+  left: 20px;
+}
+.stack3{
+  width: 100%;
+  top: 350px;
+  left: 400px;
+}
+/*Footer Style*/
+footer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, rgb(255, 187, 0), #EA6913);
+}
+footer img{
+  width: 100px;
+  filter: brightness(100);
+}
+
+/*Responsive nav bar*/
+.small-device-nav{
+  display: none !important; 
+  z-index: 100;
+  display: flex;
+  background: linear-gradient(to right, rgb(255, 187, 0), #EA6913);
+  position: fixed;
+  height: 60px;
+  justify-content: center;
+  color: black;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hamburger {
+  display: flex;
+  height: 22px;
+}
+
+.line {
+  margin-bottom: 5px;
+  color: #333;
+  width: 30px;
+  height: 4px;
+  background-color: black; 
+  border-radius: 2px;
+}
+.ls{
+  margin-bottom: 0;
+}
+.ld{
+  width: 50px;
+}
+.menu{
+    background-color: whitesmoke; /* Ensure it's explicitly set */
+    width: 100vw;
+    height: 50vh;
+    z-index: 200;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    top: 60px;
+    left: 0;
+    display: none;
+    padding-top: 15vh;
+    gap: 20px;
+}    
+.menu a{
+  text-decoration: none;
+  color: orangered;
+  font-size: 18px;
+}        
+               
+
+/*Responsive Design Starts Now*/
+
+@media screen and (max-width:1130px) {
+  .first-grid{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:1050px) {
+  .second-grid{
+    padding: 5rem 5rem;
+    
+  }
+}
+@media screen and (max-width:720px) {
+  
+  .what-we-do{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    align-items: center;
+    gap: 20px;
+  }  
+  .what-we-do img, .second-grid img{
+    width: 100%;
+  }
+  .stack, .second-stack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .stack3{
+    display: none;
+  }
+  .second-stack{
+    margin-top: 0;
+  }
+  .second-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 3rem;
+  }
+  
+  .first-grid{ 
+  margin: 2rem 3rem;
+  }
+}
+
+
+
+@media screen and (max-width:768px) {
+  .large-device-nav{
+    display: none;
+  }
+  .small-device-nav, .hamburger, .line{
+    display: block !important;
+  }
+}
